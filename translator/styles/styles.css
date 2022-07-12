@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: #2d2d2d;
+}
+h1 {
+  color: white;
+  margin: 20px 0px;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  border-radius: 7px;
+  padding: 15px 15px;
+  text-align: center;
+  font: small-caps lighter 30px "Segoe UI", Frutiger, "Frutiger Linotype",
+    "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.area__conatiner {
+  display: flex;
+  justify-content: space-around;
+}
+.btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 7px;
+  font: small-caps lighter 20px "Segoe UI", Frutiger, "Frutiger Linotype",
+    "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  background-color: #1967d2;
+  margin-top: 10px;
+  transition: 0.4s;
+}
+.btn:hover {
+  background-color: #1966d2a9;
+}
+.icon {
+  height: 10px;
+}
+
+.icon.add_to {
+  margin: 5px 5px 0px 0px;
+}
+.gg-heart:active::before,
+:active::after,
+.gg-heart:active {
+  background-color: red;
+}
+.container {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #2d2d2d;
+}
+
+.text_field {
+  width: 100%;
+  height: 100px;
+  border-radius: 7px;
+  resize: none;
+  min-height: 100px;
+  max-height: 100px;
+  font: small-caps lighter 20px "Segoe UI", Frutiger, "Frutiger Linotype",
+    "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.item {
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  display: flex;
+}
+
+.favorite {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #2d2d2d;
+  font-size: 25px;
+}
+.favorite.right {
+  background-color: rgb(255, 255, 255);
+}

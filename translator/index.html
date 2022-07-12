@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translator App</title>
+    <link rel="stylesheet" href="../translator/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://css.gg/heart.css" rel="stylesheet" />
+    <link href="https://css.gg/close.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Translator</h1>
+      <div class="area__conatiner">
+        <div class="container text">
+          <textarea
+            name="area"
+            id="text_area"
+            class="text_field input"
+            placeholder="Enter text to translate.."
+          ></textarea>
+          <button class="icon clear" hidden><i class="gg-close"></i></button>
+        </div>
+        <div class="container output">
+          <textarea
+            name="result"
+            id="result"
+            class="text_field result"
+            readonly
+            placeholder="Translation"
+          ></textarea>
+          <button class="icon add_to" hidden><i class="gg-heart"></i></button>
+        </div>
+      </div>
+      <button type="submit" class="btn">Translate</button>
+      <div class="favorites"></div>
+    </div>
+    <script src="../translator/js/index.js"></script>
+  </body>
+</html>
