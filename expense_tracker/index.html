@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="../expense_tracker/style.css" />
+  </head>
+  <body>
+    <h1>Expense Tracker</h1>
+    <div class="countainer">
+      <header class="header">
+        <div class="header_top">
+          <div class="image">
+            <img src="https://i.ibb.co/jfScDTC/budget.png" alt="Tracker logo" />
+          </div>
+          <div class="current_balance">
+            Your Balance $<span class="balance">1000</span>
+          </div>
+        </div>
+        <div class="plank"></div>
+        <div class="spending">
+          <div class="spend__container">
+            Income
+            <div class="amount__box">$<span class="income_text">0</span></div>
+          </div>
+          <div class="planks"></div>
+          <div class="spend__container">
+            Expense
+            <div class="amount__box">$<span class="expense_text">0</span></div>
+          </div>
+        </div>
+      </header>
+      <h2>Spend History</h2>
+      <div class="plank"></div>
+      <div class="history__container"></div>
+      <h2>Add new transaction</h2>
+      <div class="plank"></div>
+      <div class="transaction__container">
+        <form action="#" class="form" name="form">
+          <div class="form__item">
+            <label for="description" class="label_text">Description</label>
+            <input
+              type="text"
+              name="description"
+              id="description"
+              class="input_field description"
+              maxlength="30"
+              placeholder="Enter description.."
+            />
+          </div>
+          <div class="form__item">
+            <label for="amount" class="label_text">Amount</label>
+            <input
+              type="number"
+              name="amount"
+              min="-100000"
+              max="100000"
+              id="amount"
+              class="input_field amount"
+              placeholder="Enter Amount.."
+            />
+          </div>
+          <div class="form__item">
+            <button type="submit" class="btn">Add transaction</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../expense_tracker/index.js"></script>
+  </body>
+</html>
