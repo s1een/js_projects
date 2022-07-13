@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+:root {
+  ---myfont: small-caps lighter 30px/100% "Segoe UI", Frutiger,
+    "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  --buttonfont: small-caps lighter 20px/100% "Segoe UI", Frutiger,
+    "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: #2d2d2d;
+  font: var(---myfont);
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin: 20px auto;
+}
+.underline {
+  margin: 10px auto;
+  background-color: aqua;
+  width: 70px;
+  height: 3px;
+}
+.cards {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.card {
+  padding: 20px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.name {
+  font-weight: bold;
+}
+.job {
+  color: aqua;
+}
+.desc {
+  margin: 10px 0;
+}
+.img-container {
+  margin: 0px 0px 20px 0px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.btn {
+  background-color: #2d2d2d;
+  color: aqua;
+  font: var(--buttonfont);
+}
+.random-button {
+  margin: 0 auto;
+}
+.random {
+  border: 2px solid white;
+  padding: 5px 10px;
+  background-color: #2d2d2d;
+  color: white;
+  text-align: center;
+  border-radius: 9px;
+  margin-top: 10px;
+}
+.random:hover {
+  background-color: white;
+  color: #2d2d2d;
+  border: 2px solid black;
+  font-weight: bold;
+}
