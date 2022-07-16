@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../clear_styles.css" />
+    <link rel="stylesheet" href="../words/styles.css" />
+    <link href="https://css.gg/search.css" rel="stylesheet" />
+    <link href="https://css.gg/close-o.css" rel="stylesheet" />
+    <link href="https://css.gg/smile-sad.css" rel="stylesheet" />
+    <link href="https://css.gg/smile-mouth-open.css" rel="stylesheet" />
+    <title>URBAN DICTIONARY API</title>
+  </head>
+  <body>
+    <section class="title">
+      <h1><a href="./index.html">URBAN DICTIONARY API</a></h1>
+      <form action="#" class="input-container">
+        <div class="search">
+          <input type="text" class="input-text" required maxlength="30" />
+          <button class="btn clear" type="button">
+            <i class="gg-close-o"></i>
+          </button>
+          <button class="btn find" type="button">
+            <i class="gg-search"></i>
+          </button>
+        </div>
+      </form>
+    </section>
+    <section class="main">
+      <div class="result-container">
+        <div class="item">
+          <a href="" class="word-title">WORD</a>
+          <div class="description">
+            Word definition:
+            <span class="text-selection">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Officiis, neque ducimus. Maiores magnam, quaerat modi cum tenetur
+              asperiores recusandae dolorem!
+            </span>
+          </div>
+          <div class="example">
+            Example:
+            <span class="text-selection">Lorem ipsum dolor sit amet.</span>
+          </div>
+          <div class="from">
+            by <span class="author">[author]</span>
+            <span class="send-date">[date]</span>
+          </div>
+          <div class="rating">
+            <span class="amount likes"
+              ><i class="gg-smile-mouth-open"></i
+            ></span>
+            <span class="amount dislikes"><i class="gg-smile-sad"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../words/index.js"></script>
+  </body>
+</html>
