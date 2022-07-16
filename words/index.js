@@ -5,6 +5,14 @@ const mainForm = document.querySelector(".input-container");
 const result = document.querySelector(".result-container");
 const item = document.querySelector(".item");
 const itemClone = item.cloneNode(true);
+const randomWord = document.querySelector(".random");
+
+const toggleButton = document.querySelector(".toggle-button");
+const links = document.querySelector(".navbar-links");
+
+toggleButton.addEventListener("click", (event) => {
+  links.classList.toggle("active");
+});
 
 function replaceBrackets(str) {
   return str.replace(/\[|\]/g, "");
@@ -15,6 +23,23 @@ function makeLinks(str) {
   result = result.replaceAll("]", "</a>");
   return result;
 }
+async function getRandomWord() {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "55124000ccmshc595b69e5203666p10ff32jsn5d8f9fe02e2d",
+      "X-RapidAPI-Host": "random-words5.p.rapidapi.com",
+    },
+  };
+  const url = "https://random-words5.p.rapidapi.com/getMultipleRandom?count=1";
+  const response = await fetch(url, options);
+  const data = await response.json();
+  sendRequest(data[0]);
+  inputField.value = data[0];
+}
+randomWord.addEventListener("click", (e) => {
+  getRandomWord();
+});
 
 clearButton.addEventListener("click", (e) => {
   inputField.value = "";
@@ -36,8 +61,7 @@ mainForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const userInput = inputField.value;
   if (!inputValidate(userInput)) {
-    const data = sendRequest(userInput);
-    makeCard(data);
+    sendRequest(userInput);
   } else {
     alert("Incurrect Input!");
     console.log(`User Input: ${userInput}`);
@@ -55,7 +79,7 @@ async function sendRequest(value) {
   };
   const response = await fetch(url, options);
   const data = await response.json();
-  return await data.list;
+  return await makeCard(data.list);
 }
 
 async function makeCard(data) {
@@ -79,8 +103,7 @@ async function makeCard(data) {
   const wordLinks = document.querySelectorAll(".word-link");
   wordLinks.forEach((el) => {
     el.addEventListener("click", (event) => {
-      const data = sendRequest(event.currentTarget.textContent);
-      makeCard(data);
+      sendRequest(event.currentTarget.textContent);
       inputField.value = event.currentTarget.textContent;
     });
   });
