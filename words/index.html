@@ -5,79 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../clear_styles.css" />
-    <link rel="stylesheet" href="../words/styles.css" />
+    <link rel="stylesheet" href="../words/styles/styles.css" />
     <link href="https://css.gg/search.css" rel="stylesheet" />
     <link href="https://css.gg/close-o.css" rel="stylesheet" />
     <link href="https://css.gg/smile-sad.css" rel="stylesheet" />
     <link href="https://css.gg/smile-mouth-open.css" rel="stylesheet" />
+    <link href="https://css.gg/album.css" rel="stylesheet" />
     <title>URBAN DICTIONARY API</title>
   </head>
   <body>
-    <nav class="title">
-      <div class="navbar">
-        <div class="brand-title">
-          <a href="./index.html">URBAN DICTIONARY API</a>
-        </div>
-        <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#" class="random">Random</a></li>
-            <li><a href="#">Favorites</a></li>
-          </ul>
-        </div>
-      </div>
-      <form action="#" class="input-container">
-        <div class="search">
-          <input
-            type="text"
-            class="input-text"
-            placeholder="Type any word here..."
-            required
-            maxlength="30"
-          />
-          <button class="btn clear" type="button">
-            <i class="gg-close-o"></i>
-          </button>
-          <button class="btn find" type="button">
-            <i class="gg-search"></i>
-          </button>
-        </div>
-      </form>
-    </nav>
-    <section class="main">
-      <div class="result-container">
-        <div class="item">
-          <a href="" class="word-title">WORD</a>
-          <div class="description">
-            Word definition:
-            <span class="text-selection">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Officiis, neque ducimus. Maiores magnam, quaerat modi cum tenetur
-              asperiores recusandae dolorem!
-            </span>
+    <div class="wrapper">
+      <nav class="title">
+        <div class="navbar">
+          <div class="brand-title">
+            <a href="./index.html">URBAN DICTIONARY API</a>
           </div>
-          <div class="example">
-            Example:
-            <span class="text-selection">Lorem ipsum dolor sit amet.</span>
-          </div>
-          <div class="from">
-            by <span class="author">[author]</span>
-            <span class="send-date">[date]</span>
-          </div>
-          <div class="rating">
-            <span class="amount likes"
-              ><i class="gg-smile-mouth-open"></i
-            ></span>
-            <span class="amount dislikes"><i class="gg-smile-sad"></i></span>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+              <li><a href="./index.html" class="home">Home</a></li>
+              <li><a href="#" class="random">Random</a></li>
+              <li><a href="#" class="favor">Favorites</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-    <script src="../words/index.js"></script>
+        <form action="#" class="input-container">
+          <div class="search">
+            <input
+              type="text"
+              class="input-text"
+              placeholder="Type any word here..."
+              required
+              maxlength="30"
+            />
+            <button class="btn clear" type="button">
+              <i class="gg-close-o"></i>
+            </button>
+            <button class="btn find" type="button">
+              <i class="gg-search"></i>
+            </button>
+          </div>
+        </form>
+      </nav>
+      <section class="main">
+        <div class="result-container">
+          <div class="item" hidden>
+            <a href="" class="word-title">WORD</a>
+            <div class="description">
+              Word definition:
+              <span class="text-selection">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officiis, neque ducimus. Maiores magnam, quaerat modi cum
+                tenetur asperiores recusandae dolorem!
+              </span>
+            </div>
+            <div class="example">
+              Example:
+              <span class="text-selection">Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="from">
+              by <span class="author">[author]</span>
+              <span class="send-date">[date]</span>
+            </div>
+            <div class="rating">
+              <span class="amount likes"
+                ><i class="gg-smile-mouth-open"></i
+              ></span>
+              <span class="favorite" onclick="return false">
+                <i class="gg-album"></i>
+              </span>
+              <span class="amount dislikes">
+                <i class="gg-smile-sad"></i>
+              </span>
+            </div>
+          </div>
+          <div class="item picture">
+            <img
+              src="https://media0.giphy.com/media/DdGugw1M5eUsU/giphy.gif?cid=790b761161ec62d3881c765853451e4d4fef31a2449c57e1&rid=giphy.gif&ct=g"
+              alt=""
+              width="450"
+              height="450"
+              class="image"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="../words/index.mjs" type="module"></script>
+    <script src="./api_keys.mjs" type="module"></script>
   </body>
 </html>
