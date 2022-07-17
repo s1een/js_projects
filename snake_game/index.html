@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../clear_styles.css" />
+    <link rel="stylesheet" href="../snake_game/styles/styles.css" />
+    <title>Snake</title>
+    <script src="../snake_game/modules/app.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="cantainer">
+      <div hidden class="score">0</div>
+      <div class="settings">
+        <div class="header">Settings</div>
+        <div class="main">
+          <div class="colors">
+            Snake Color:
+            <input
+              class="snake-color user-input"
+              type="color"
+              value="#8a2be2"
+            />
+            Food Color:
+            <input class="food-color user-input" type="color" value="#00ff00" />
+          </div>
+          <div class="points">
+            Score Increment:
+            <input
+              class="increment user-input"
+              type="number"
+              max="50"
+              min="1"
+              value="10"
+              placeholder="Enter Score Increment.."
+            />
+            Speed:
+            <input
+              class="speed user-input"
+              type="number"
+              max="10"
+              min="1"
+              value="10"
+              placeholder="Enter Speed Increment.."
+            />
+          </div>
+          <div class="mods">
+            Game Mode:
+            <select name="mod" id="mod" class="user-input game-mode">
+              <option value="default">Default Mode</option>
+              <option value="race">Race Mode</option>
+              <option value="bombs">Bombs Mode</option>
+            </select>
+          </div>
+          <div class="buttons">
+            <button class="btn">Start Game</button>
+          </div>
+        </div>
+      </div>
+      <div id="game-board"></div>
+    </div>
+  </body>
+</html>
